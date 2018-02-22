@@ -21,16 +21,39 @@ public class okno_glowne extends javax.swing.JFrame {
      * Creates new form okno_glowne
      */
     baza_danych.Arduino ard = new baza_danych.Arduino();
-    ImageIcon obrazek0 = new ImageIcon("obrazki/niebieski.jpg");
-    ImageIcon obrazek1 = new ImageIcon("obrazki/zielony.jpg");
-    ImageIcon obrazek2 = new ImageIcon("obrazki/czerwony.jpg");
-    ImageIcon obrazek3 = new ImageIcon("obrazki/fioletowy.jpg");
-    ImageIcon obrazek4 = new ImageIcon("obrazki/bialy.jpg");
-    ImageIcon obrazek5 = new ImageIcon("obrazki/zgon0.jpg");
-    ImageIcon obrazek6 = new ImageIcon("obrazki/zgon1.jpg");
-    ImageIcon obrazek7 = new ImageIcon("obrazki/zgon2.jpg");
-    ImageIcon obrazek8 = new ImageIcon("obrazki/zgon3.jpg");
-    ImageIcon obrazek9 = new ImageIcon("obrazki/zgon4.jpg");
+    ImageIcon obrazek = new ImageIcon("obrazki/wirus1.jpg");
+    ImageIcon obrazek0 = new ImageIcon("obrazki/wirus1.jpg");
+    ImageIcon obrazek1 = new ImageIcon("obrazki/wirus2.jpg");
+    ImageIcon obrazek2 = new ImageIcon("obrazki/wirus3.jpg");
+    ImageIcon obrazek3 = new ImageIcon("obrazki/wirus4.jpg");
+    ImageIcon obrazek4 = new ImageIcon("obrazki/wirus5.jpg");
+    ImageIcon obrazek5 = new ImageIcon("obrazki/wirus6.jpg");
+    ImageIcon obrazek6 = new ImageIcon("obrazki/wirus7.jpg");
+    ImageIcon obrazek7 = new ImageIcon("obrazki/wirus8.jpg");
+    ImageIcon obrazek8 = new ImageIcon("obrazki/wirus9.jpg");
+    ImageIcon obrazek9 = new ImageIcon("obrazki/wirus10.jpg");
+    ImageIcon obrazek10 = new ImageIcon("obrazki/zgon1.jpg");
+    ImageIcon obrazek11 = new ImageIcon("obrazki/zgon2.jpg");
+    ImageIcon obrazek12 = new ImageIcon("obrazki/zgon3.jpg");
+    ImageIcon obrazek13 = new ImageIcon("obrazki/zgon4.jpg");
+    ImageIcon obrazek14 = new ImageIcon("obrazki/zgon5.jpg");
+    ImageIcon obrazek15 = new ImageIcon("obrazki/zgon6.jpg");
+    ImageIcon obrazek16 = new ImageIcon("obrazki/zgon7.jpg");
+    ImageIcon obrazek17 = new ImageIcon("obrazki/zgon8.jpg");
+    ImageIcon obrazek18 = new ImageIcon("obrazki/zgon9.jpg");
+    ImageIcon obrazek19 = new ImageIcon("obrazki/zgon10.jpg");
+    ImageIcon obrazek20 = new ImageIcon("obrazki/zgon11.jpg");
+    ImageIcon obrazek21 = new ImageIcon("obrazki/zgon12.jpg");
+    ImageIcon obrazek22 = new ImageIcon("obrazki/zgon13.jpg");
+    ImageIcon obrazek23 = new ImageIcon("obrazki/zgon14.jpg");
+    ImageIcon obrazek24 = new ImageIcon("obrazki/zgon15.jpg");
+    ImageIcon obrazek25 = new ImageIcon("obrazki/zgon16.jpg");
+    ImageIcon obrazek26 = new ImageIcon("obrazki/zgon17.jpg");
+    ImageIcon obrazek27 = new ImageIcon("obrazki/zgon18.jpg");
+    ImageIcon obrazek28 = new ImageIcon("obrazki/zgon19.jpg");
+    ImageIcon obrazek29 = new ImageIcon("obrazki/zgon20.jpg");
+    
+    
     String haslo_haslo = "";
     String prawdziwe_haslo = "18221";
     int[] zamknij_haslo2 = new int[5];
@@ -41,16 +64,15 @@ public class okno_glowne extends javax.swing.JFrame {
     int moment = 0;
 
     public okno_glowne() {
-        zamknij_haslo2[0] = 5;
-        zamknij_haslo2[1] = 5;
-        zamknij_haslo2[2] = 3;
-        zamknij_haslo2[3] = 2;
-        zamknij_haslo2[4] = 1;
+        zamknij_haslo2[0] = 4;
+        zamknij_haslo2[1] = 3;
+        zamknij_haslo2[2] = 2;
+        zamknij_haslo2[3] = 1;
         initComponents();
         zgony_opis.setText("Śmierć była krótka.");
         wirusy_zdjecie.setIcon(obrazek0);
         zgony_zdjecie.setIcon(obrazek5);
-        wirusy_opis.setText("Dziwny niebieski wirus.");
+        wirusy_opis.setText("Dziwny wirus1 wirus.");
 
     }
 
@@ -625,7 +647,6 @@ public class okno_glowne extends javax.swing.JFrame {
 
         wirusy.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         wirusy.setText("Lista wirusów");
-        wirusy.setEnabled(false);
         wirusy.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 wirusyActionPerformed(evt);
@@ -634,7 +655,6 @@ public class okno_glowne extends javax.swing.JFrame {
 
         zgony.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         zgony.setText("Lista zgonów");
-        zgony.setEnabled(false);
         zgony.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 zgonyActionPerformed(evt);
@@ -774,7 +794,7 @@ public class okno_glowne extends javax.swing.JFrame {
     private void uzytkownikActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uzytkownikActionPerformed
         // TODO add your handling code here:
         komunikat.setVisible(true);
-        komunikat_tekst.setText("Proszę przycisnąć przycisk zamknij i przyłożyć \npalec do czytnika.");
+        komunikat_tekst.setText("Proszę przycisnąć przycisk zamknij i poczekać \n2 sekundy na identyfikację.");
         moment = 2;
     }//GEN-LAST:event_uzytkownikActionPerformed
 
@@ -786,7 +806,7 @@ public class okno_glowne extends javax.swing.JFrame {
         login.setText("Login: Administrator");
         logowanie.setVisible(false);
         zaloguj.setEnabled(false);
-        //tlo.setIcon(obrazek);
+//        tlo.setIcon(obrazek);
     }//GEN-LAST:event_OK_logowanieActionPerformed
 
     private void zgony_wyjdzActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zgony_wyjdzActionPerformed
@@ -883,7 +903,7 @@ public class okno_glowne extends javax.swing.JFrame {
         haslo.setVisible(false);
         if (haslo_haslo.equals(prawdziwe_haslo)) {
             komunikat.setVisible(true);
-            komunikat_tekst.setText("Poprawne hasło. Proszę nacisnąć zamknij i przyłożyć \npalec do czytnika.");
+            komunikat_tekst.setText("Poprawne hasło. Proszę nacisnąć zamknij i poczekać \n2 sekundy na rejestrację.");
 
             moment = 1;
 
@@ -1027,30 +1047,90 @@ public class okno_glowne extends javax.swing.JFrame {
 
     private void zgony_nastepnyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zgony_nastepnyActionPerformed
         // TODO add your handling code here:
-        if (licznik_zgony > 3) {
+        if (licznik_zgony > 18) {
             licznik_zgony = 0;
         } else {
             licznik_zgony++;
         }
         if (licznik_zgony == 0) {
-            zgony_zdjecie.setIcon(obrazek5);
+            zgony_zdjecie.setIcon(obrazek10);
             zgony_opis.setText("Śmierć była krótka.");
         }
         if (licznik_zgony == 1) {
-            zgony_zdjecie.setIcon(obrazek6);
+            zgony_zdjecie.setIcon(obrazek11);
             zgony_opis.setText("Śmierć była bolesna.");
         }
         if (licznik_zgony == 2) {
-            zgony_zdjecie.setIcon(obrazek7);
+            zgony_zdjecie.setIcon(obrazek12);
             zgony_opis.setText("Śmierć była straszna.");
         }
         if (licznik_zgony == 3) {
-            zgony_zdjecie.setIcon(obrazek8);
+            zgony_zdjecie.setIcon(obrazek13);
             zgony_opis.setText("Śmierć była szybka.");
         }
         if (licznik_zgony == 4) {
-            zgony_zdjecie.setIcon(obrazek9);
-            zgony_opis.setText("Śmierć była dziwna.");
+            zgony_zdjecie.setIcon(obrazek14);
+            zgony_opis.setText("Śmierć była dziwna1.");
+        }
+        if (licznik_zgony == 5) {
+            zgony_zdjecie.setIcon(obrazek15);
+            zgony_opis.setText("Śmierć była dziwna2.");
+        }
+        if (licznik_zgony == 6) {
+            zgony_zdjecie.setIcon(obrazek16);
+            zgony_opis.setText("Śmierć była dziwna3.");
+        }
+        if (licznik_zgony == 7) {
+            zgony_zdjecie.setIcon(obrazek17);
+            zgony_opis.setText("Śmierć była dziwna4.");
+        }
+        if (licznik_zgony == 8) {
+            zgony_zdjecie.setIcon(obrazek18);
+            zgony_opis.setText("Śmierć była dziwna5.");
+        }
+        if (licznik_zgony == 9) {
+            zgony_zdjecie.setIcon(obrazek19);
+            zgony_opis.setText("Śmierć była dziwna6.");
+        }
+        if (licznik_zgony == 10) {
+            zgony_zdjecie.setIcon(obrazek20);
+            zgony_opis.setText("Śmierć była dziwna7.");
+        }
+        if (licznik_zgony == 11) {
+            zgony_zdjecie.setIcon(obrazek21);
+            zgony_opis.setText("Śmierć była dziwna8.");
+        }
+        if (licznik_zgony == 12) {
+            zgony_zdjecie.setIcon(obrazek22);
+            zgony_opis.setText("Śmierć była dziwna9.");
+        }
+        if (licznik_zgony == 13) {
+            zgony_zdjecie.setIcon(obrazek23);
+            zgony_opis.setText("Śmierć była dziwna10.");
+        }
+        if (licznik_zgony == 14) {
+            zgony_zdjecie.setIcon(obrazek24);
+            zgony_opis.setText("Śmierć była dziwna11.");
+        }
+        if (licznik_zgony == 15) {
+            zgony_zdjecie.setIcon(obrazek25);
+            zgony_opis.setText("Śmierć była dziwna12.");
+        }
+        if (licznik_zgony == 16) {
+            zgony_zdjecie.setIcon(obrazek26);
+            zgony_opis.setText("Śmierć była dziwna13.");
+        }
+        if (licznik_zgony == 17) {
+            zgony_zdjecie.setIcon(obrazek27);
+            zgony_opis.setText("Śmierć była dziwna14.");
+        }
+        if (licznik_zgony == 18) {
+            zgony_zdjecie.setIcon(obrazek28);
+            zgony_opis.setText("Śmierć była dziwna15.");
+        }
+        if (licznik_zgony == 19) {
+            zgony_zdjecie.setIcon(obrazek29);
+            zgony_opis.setText("Śmierć była dziwna16.");
         }
 
     }//GEN-LAST:event_zgony_nastepnyActionPerformed
@@ -1058,29 +1138,89 @@ public class okno_glowne extends javax.swing.JFrame {
     private void zgony_poprzedniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zgony_poprzedniActionPerformed
         // TODO add your handling code here:
         if (licznik_zgony < 1) {
-            licznik_zgony = 4;
+            licznik_zgony = 19;
         } else {
             licznik_zgony--;
         }
         if (licznik_zgony == 0) {
-            zgony_zdjecie.setIcon(obrazek5);
+            zgony_zdjecie.setIcon(obrazek10);
             zgony_opis.setText("Śmierć była krótka.");
         }
         if (licznik_zgony == 1) {
-            zgony_zdjecie.setIcon(obrazek6);
+            zgony_zdjecie.setIcon(obrazek11);
             zgony_opis.setText("Śmierć była bolesna.");
         }
         if (licznik_zgony == 2) {
-            zgony_zdjecie.setIcon(obrazek7);
+            zgony_zdjecie.setIcon(obrazek12);
             zgony_opis.setText("Śmierć była straszna.");
         }
         if (licznik_zgony == 3) {
-            zgony_zdjecie.setIcon(obrazek8);
+            zgony_zdjecie.setIcon(obrazek13);
             zgony_opis.setText("Śmierć była szybka.");
         }
         if (licznik_zgony == 4) {
-            zgony_zdjecie.setIcon(obrazek9);
-            zgony_opis.setText("Śmierć była dziwna.");
+            zgony_zdjecie.setIcon(obrazek14);
+            zgony_opis.setText("Śmierć była dziwna1.");
+        }
+        if (licznik_zgony == 5) {
+            zgony_zdjecie.setIcon(obrazek15);
+            zgony_opis.setText("Śmierć była dziwna2.");
+        }
+        if (licznik_zgony == 6) {
+            zgony_zdjecie.setIcon(obrazek16);
+            zgony_opis.setText("Śmierć była dziwna3.");
+        }
+        if (licznik_zgony == 7) {
+            zgony_zdjecie.setIcon(obrazek17);
+            zgony_opis.setText("Śmierć była dziwna4.");
+        }
+        if (licznik_zgony == 8) {
+            zgony_zdjecie.setIcon(obrazek18);
+            zgony_opis.setText("Śmierć była dziwna5.");
+        }
+        if (licznik_zgony == 9) {
+            zgony_zdjecie.setIcon(obrazek19);
+            zgony_opis.setText("Śmierć była dziwna6.");
+        }
+        if (licznik_zgony == 10) {
+            zgony_zdjecie.setIcon(obrazek20);
+            zgony_opis.setText("Śmierć była dziwna7.");
+        }
+        if (licznik_zgony == 11) {
+            zgony_zdjecie.setIcon(obrazek21);
+            zgony_opis.setText("Śmierć była dziwna8.");
+        }
+        if (licznik_zgony == 12) {
+            zgony_zdjecie.setIcon(obrazek22);
+            zgony_opis.setText("Śmierć była dziwna9.");
+        }
+        if (licznik_zgony == 13) {
+            zgony_zdjecie.setIcon(obrazek23);
+            zgony_opis.setText("Śmierć była dziwna10.");
+        }
+        if (licznik_zgony == 14) {
+            zgony_zdjecie.setIcon(obrazek24);
+            zgony_opis.setText("Śmierć była dziwna11.");
+        }
+        if (licznik_zgony == 15) {
+            zgony_zdjecie.setIcon(obrazek25);
+            zgony_opis.setText("Śmierć była dziwna12.");
+        }
+        if (licznik_zgony == 16) {
+            zgony_zdjecie.setIcon(obrazek26);
+            zgony_opis.setText("Śmierć była dziwna13.");
+        }
+        if (licznik_zgony == 17) {
+            zgony_zdjecie.setIcon(obrazek27);
+            zgony_opis.setText("Śmierć była dziwna14.");
+        }
+        if (licznik_zgony == 18) {
+            zgony_zdjecie.setIcon(obrazek28);
+            zgony_opis.setText("Śmierć była dziwna15.");
+        }
+        if (licznik_zgony == 19) {
+            zgony_zdjecie.setIcon(obrazek29);
+            zgony_opis.setText("Śmierć była dziwna16.");
         }
 
     }//GEN-LAST:event_zgony_poprzedniActionPerformed
@@ -1094,60 +1234,101 @@ public class okno_glowne extends javax.swing.JFrame {
     private void wirusy_poprzedniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wirusy_poprzedniActionPerformed
         // TODO add your handling code here:
         if (licznik_wirusy < 1) {
-            licznik_wirusy = 4;
+            licznik_wirusy = 9;
         } else {
             licznik_wirusy--;
         }
         if (licznik_wirusy == 0) {
             wirusy_zdjecie.setIcon(obrazek0);
-            wirusy_opis.setText("Dziwny niebieski wirus.");
+            wirusy_opis.setText("Dziwny wirus1 wirus.");
         }
         if (licznik_wirusy == 1) {
             wirusy_zdjecie.setIcon(obrazek1);
-            wirusy_opis.setText("Straszny zielony wirus.");
+            wirusy_opis.setText("Straszny wirus2 wirus.");
         }
         if (licznik_wirusy == 2) {
             wirusy_zdjecie.setIcon(obrazek2);
-            wirusy_opis.setText("Zabójczy czerwony wirus.");
+            wirusy_opis.setText("Zabójczy wirus3 wirus.");
         }
         if (licznik_wirusy == 3) {
             wirusy_zdjecie.setIcon(obrazek3);
-            wirusy_opis.setText("Niegroźny fioletowy wirus.");
+            wirusy_opis.setText("Niegroźny wirus4 wirus.");
         }
         if (licznik_wirusy == 4) {
             wirusy_zdjecie.setIcon(obrazek4);
-            wirusy_opis.setText("Biały wirus.");
+            wirusy_opis.setText("Biały wirus1.");
         }
+        if (licznik_wirusy == 5) {
+            wirusy_zdjecie.setIcon(obrazek5);
+            wirusy_opis.setText("Biały wirus2.");
+        }
+        if (licznik_wirusy == 6) {
+            wirusy_zdjecie.setIcon(obrazek6);
+            wirusy_opis.setText("Biały wirus3.");
+        }
+        if (licznik_wirusy == 7) {
+            wirusy_zdjecie.setIcon(obrazek7);
+            wirusy_opis.setText("Biały wirus4.");
+        }
+        if (licznik_wirusy == 8) {
+            wirusy_zdjecie.setIcon(obrazek8);
+            wirusy_opis.setText("Biały wirus5.");
+        }
+        if (licznik_wirusy == 9) {
+            wirusy_zdjecie.setIcon(obrazek9);
+            wirusy_opis.setText("Biały wirus6.");
+        }
+   
 
 
     }//GEN-LAST:event_wirusy_poprzedniActionPerformed
 
     private void wirusy_nastepnyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wirusy_nastepnyActionPerformed
         // TODO add your handling code here:
-        if (licznik_wirusy > 3) {
+        if (licznik_wirusy > 8) {
             licznik_wirusy = 0;
         } else {
             licznik_wirusy++;
         }
-        if (licznik_wirusy == 0) {
+              if (licznik_wirusy == 0) {
             wirusy_zdjecie.setIcon(obrazek0);
-            wirusy_opis.setText("Dziwny niebieski wirus.");
+            wirusy_opis.setText("Dziwny wirus1 wirus.");
         }
         if (licznik_wirusy == 1) {
             wirusy_zdjecie.setIcon(obrazek1);
-            wirusy_opis.setText("Straszny zielony wirus.");
+            wirusy_opis.setText("Straszny wirus2 wirus.");
         }
         if (licznik_wirusy == 2) {
             wirusy_zdjecie.setIcon(obrazek2);
-            wirusy_opis.setText("Zabójczy czerwony wirus.");
+            wirusy_opis.setText("Zabójczy wirus3 wirus.");
         }
         if (licznik_wirusy == 3) {
             wirusy_zdjecie.setIcon(obrazek3);
-            wirusy_opis.setText("Niegroźny fioletowy wirus.");
+            wirusy_opis.setText("Niegroźny wirus4 wirus.");
         }
         if (licznik_wirusy == 4) {
             wirusy_zdjecie.setIcon(obrazek4);
-            wirusy_opis.setText("Biały wirus.");
+            wirusy_opis.setText("Biały wirus1.");
+        }
+        if (licznik_wirusy == 5) {
+            wirusy_zdjecie.setIcon(obrazek5);
+            wirusy_opis.setText("Biały wirus2.");
+        }
+        if (licznik_wirusy == 6) {
+            wirusy_zdjecie.setIcon(obrazek6);
+            wirusy_opis.setText("Biały wirus3.");
+        }
+        if (licznik_wirusy == 7) {
+            wirusy_zdjecie.setIcon(obrazek7);
+            wirusy_opis.setText("Biały wirus4.");
+        }
+        if (licznik_wirusy == 8) {
+            wirusy_zdjecie.setIcon(obrazek8);
+            wirusy_opis.setText("Biały wirus5.");
+        }
+        if (licznik_wirusy == 9) {
+            wirusy_zdjecie.setIcon(obrazek9);
+            wirusy_opis.setText("Biały wirus6.");
         }
     }//GEN-LAST:event_wirusy_nastepnyActionPerformed
 
@@ -1203,7 +1384,7 @@ public class okno_glowne extends javax.swing.JFrame {
 
     private void zamknij_zamknijActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zamknij_zamknijActionPerformed
         // TODO add your handling code here:
-        if (licznik_zamknij < 5) {
+        if (licznik_zamknij < 4) {
             zamknij_haslo.setVisible(false);
         } else {
             try {
