@@ -21,7 +21,7 @@ public class okno_glowne extends javax.swing.JFrame {
      * Creates new form okno_glowne
      */
     baza_danych.Arduino ard = new baza_danych.Arduino();
-    ImageIcon obrazek = new ImageIcon("obrazki/wirus1.jpg");
+    ImageIcon obrazek = new ImageIcon("obrazki/tlo.jpg");
     ImageIcon obrazek0 = new ImageIcon("obrazki/wirus1.jpg");
     ImageIcon obrazek1 = new ImageIcon("obrazki/wirus2.jpg");
     ImageIcon obrazek2 = new ImageIcon("obrazki/wirus3.jpg");
@@ -73,7 +73,7 @@ public class okno_glowne extends javax.swing.JFrame {
         wirusy_zdjecie.setIcon(obrazek0);
         zgony_zdjecie.setIcon(obrazek5);
         wirusy_opis.setText("Dziwny wirus1 wirus.");
-
+        tlo.setIcon(obrazek);
     }
 
     /**
@@ -143,6 +143,7 @@ public class okno_glowne extends javax.swing.JFrame {
         logowanie.setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         logowanie.setTitle("Logowanie");
         logowanie.setAlwaysOnTop(true);
+        logowanie.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
         logowanie.setFocusTraversalPolicyProvider(true);
         logowanie.setLocation(new java.awt.Point(300, 50));
         logowanie.setName("Logowanie"); // NOI18N
@@ -190,6 +191,7 @@ public class okno_glowne extends javax.swing.JFrame {
         );
 
         komunikat.setAlwaysOnTop(true);
+        komunikat.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
         komunikat.setLocation(new java.awt.Point(300, 50));
         komunikat.setUndecorated(true);
         komunikat.setSize(new java.awt.Dimension(400, 229));
@@ -232,6 +234,7 @@ public class okno_glowne extends javax.swing.JFrame {
         zgony_okno.setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         zgony_okno.setTitle("Lista zgonów");
         zgony_okno.setAlwaysOnTop(true);
+        zgony_okno.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
         zgony_okno.setLocation(new java.awt.Point(300, 140));
         zgony_okno.setUndecorated(true);
         zgony_okno.setResizable(false);
@@ -298,6 +301,7 @@ public class okno_glowne extends javax.swing.JFrame {
         );
 
         wirusy_okno.setAlwaysOnTop(true);
+        wirusy_okno.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
         wirusy_okno.setLocation(new java.awt.Point(300, 140));
         wirusy_okno.setUndecorated(true);
         wirusy_okno.setResizable(false);
@@ -363,6 +367,7 @@ public class okno_glowne extends javax.swing.JFrame {
         );
 
         haslo.setAlwaysOnTop(true);
+        haslo.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
         haslo.setLocation(new java.awt.Point(300, 50));
         haslo.setUndecorated(true);
         haslo.setResizable(false);
@@ -525,6 +530,7 @@ public class okno_glowne extends javax.swing.JFrame {
         );
 
         strzalki_okno.setAlwaysOnTop(true);
+        strzalki_okno.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
 
         javax.swing.GroupLayout strzalki_oknoLayout = new javax.swing.GroupLayout(strzalki_okno.getContentPane());
         strzalki_okno.getContentPane().setLayout(strzalki_oknoLayout);
@@ -540,6 +546,7 @@ public class okno_glowne extends javax.swing.JFrame {
         zamknij_haslo.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         zamknij_haslo.setTitle("Zamknij");
         zamknij_haslo.setAlwaysOnTop(true);
+        zamknij_haslo.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
         zamknij_haslo.setLocation(new java.awt.Point(300, 50));
         zamknij_haslo.setName("Zamknij"); // NOI18N
         zamknij_haslo.setUndecorated(true);
@@ -632,6 +639,7 @@ public class okno_glowne extends javax.swing.JFrame {
         zamknij_haslo.getAccessibleContext().setAccessibleName("");
 
         setTitle("Baza danych");
+        setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setUndecorated(true);
         setResizable(false);
@@ -647,6 +655,7 @@ public class okno_glowne extends javax.swing.JFrame {
 
         wirusy.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         wirusy.setText("Lista wirusów");
+        wirusy.setBorder(null);
         wirusy.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 wirusyActionPerformed(evt);
@@ -683,6 +692,9 @@ public class okno_glowne extends javax.swing.JFrame {
             }
         });
 
+        tlo.setFocusable(false);
+        tlo.setPreferredSize(new java.awt.Dimension(500, 500));
+
         zaloguj.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         zaloguj.setText("Zaloguj");
         zaloguj.setEnabled(false);
@@ -713,28 +725,29 @@ public class okno_glowne extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(zaloguj, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(367, 367, 367))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(wirusy, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(uprawnienia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(317, 317, 317)
+                                .addComponent(klawiatura, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(wirusy, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(uprawnienia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(zaloguj, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(zamknij, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(31, 31, 31))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(klawiatura, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                .addComponent(tlo, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGap(263, 263, 263))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(tlo, javax.swing.GroupLayout.DEFAULT_SIZE, 578, Short.MAX_VALUE)
+                                .addGap(10, 10, 10)))))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(zgony, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -745,10 +758,9 @@ public class okno_glowne extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addComponent(klawiatura, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(46, 46, 46)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(uzytkownik, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -758,17 +770,18 @@ public class okno_glowne extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(strzalki, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(uprawnienia, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 475, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(zgony, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(wirusy, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(20, 20, 20)
+                        .addComponent(klawiatura, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)
+                        .addComponent(tlo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 235, Short.MAX_VALUE)
                         .addComponent(zamknij, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(62, 62, 62))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(tlo, javax.swing.GroupLayout.PREFERRED_SIZE, 626, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 24, Short.MAX_VALUE))
         );
 
         pack();
@@ -806,7 +819,7 @@ public class okno_glowne extends javax.swing.JFrame {
         login.setText("Login: Administrator");
         logowanie.setVisible(false);
         zaloguj.setEnabled(false);
-//        tlo.setIcon(obrazek);
+        
     }//GEN-LAST:event_OK_logowanieActionPerformed
 
     private void zgony_wyjdzActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zgony_wyjdzActionPerformed
