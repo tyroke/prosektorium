@@ -5,6 +5,7 @@
  */
 package baza_danych;
 
+import java.awt.Font;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -28,9 +29,9 @@ public class okno_glowne extends javax.swing.JFrame {
     ImageIcon obrazek3 = new ImageIcon("obrazki/wirus4.jpg");
     ImageIcon obrazek4 = new ImageIcon("obrazki/wirus5.jpg");
     ImageIcon obrazek5 = new ImageIcon("obrazki/wirus6.jpg");
-    ImageIcon obrazek6 = new ImageIcon("obrazki/wirus7.jpg");
+    ImageIcon obrazek6 = new ImageIcon("obrazki/wirus7.png");
     ImageIcon obrazek7 = new ImageIcon("obrazki/wirus8.jpg");
-    ImageIcon obrazek8 = new ImageIcon("obrazki/wirus9.jpg");
+    ImageIcon obrazek8 = new ImageIcon("obrazki/wirus9.png");
     ImageIcon obrazek9 = new ImageIcon("obrazki/wirus10.jpg");
     ImageIcon obrazek10 = new ImageIcon("obrazki/zgon1.jpg");
     ImageIcon obrazek11 = new ImageIcon("obrazki/zgon2.jpg");
@@ -47,13 +48,7 @@ public class okno_glowne extends javax.swing.JFrame {
     ImageIcon obrazek22 = new ImageIcon("obrazki/zgon13.jpg");
     ImageIcon obrazek23 = new ImageIcon("obrazki/zgon14.jpg");
     ImageIcon obrazek24 = new ImageIcon("obrazki/zgon15.jpg");
-    ImageIcon obrazek25 = new ImageIcon("obrazki/zgon16.jpg");
-    ImageIcon obrazek26 = new ImageIcon("obrazki/zgon17.jpg");
-    ImageIcon obrazek27 = new ImageIcon("obrazki/zgon18.jpg");
-    ImageIcon obrazek28 = new ImageIcon("obrazki/zgon19.jpg");
-    ImageIcon obrazek29 = new ImageIcon("obrazki/zgon20.jpg");
-    
-    
+
     String haslo_haslo = "";
     String prawdziwe_haslo = "18221";
     int[] zamknij_haslo2 = new int[5];
@@ -69,10 +64,18 @@ public class okno_glowne extends javax.swing.JFrame {
         zamknij_haslo2[2] = 2;
         zamknij_haslo2[3] = 1;
         initComponents();
+        Font font1 = new Font("SansSerif", Font.BOLD, 20);
+        Font font2 = new Font("SansSerif", Font.PLAIN, 17);
+        zgony_tytul.setFont(font1);
+        zgony_opis.setFont(font2);
+        zgony_tytul.setText("Nr 23504");
         zgony_opis.setText("Śmierć była krótka.");
         wirusy_zdjecie.setIcon(obrazek0);
-        zgony_zdjecie.setIcon(obrazek5);
-        wirusy_opis.setText("Dziwny wirus1 wirus.");
+        zgony_zdjecie.setIcon(obrazek10);
+        wirusy_tytul.setFont(font1);
+        wirusy_tytul.setText("Chlamydia psittaci");
+        wirusy_opis.setFont(font2);
+        wirusy_opis.setText("Drobnoustrój wywołujący ornitozę \ninaczej zwaną papuzicą. \nBakterie bezwzględnie\nwewnątrzkomórkowe. Posiadają\nlipopolisacharyd w ścianie \nkomórkowej. \nObjawy fazy drugiej to suchy kaszel, \nkrwioplucie i ból w klatce piersiowej.");
         tlo.setIcon(obrazek);
     }
 
@@ -100,6 +103,7 @@ public class okno_glowne extends javax.swing.JFrame {
         zgony_wyjdz = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         zgony_opis = new javax.swing.JTextArea();
+        zgony_tytul = new javax.swing.JTextField();
         wirusy_okno = new javax.swing.JFrame();
         wirusy_zdjecie = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -107,6 +111,7 @@ public class okno_glowne extends javax.swing.JFrame {
         wirusy_poprzedni = new javax.swing.JButton();
         wirusy_nastepny = new javax.swing.JButton();
         wirusy_zamknij = new javax.swing.JButton();
+        wirusy_tytul = new javax.swing.JTextField();
         haslo = new javax.swing.JFrame();
         haslo_tekst = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -268,31 +273,45 @@ public class okno_glowne extends javax.swing.JFrame {
         zgony_opis.setText("\n");
         jScrollPane1.setViewportView(zgony_opis);
 
+        zgony_tytul.setEditable(false);
+        zgony_tytul.setName("zgony_tytul"); // NOI18N
+
         javax.swing.GroupLayout zgony_oknoLayout = new javax.swing.GroupLayout(zgony_okno.getContentPane());
         zgony_okno.getContentPane().setLayout(zgony_oknoLayout);
         zgony_oknoLayout.setHorizontalGroup(
             zgony_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(zgony_oknoLayout.createSequentialGroup()
-                .addComponent(zgony_zdjecie, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(zgony_zdjecie, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 62, Short.MAX_VALUE))
             .addGroup(zgony_oknoLayout.createSequentialGroup()
-                .addGap(252, 252, 252)
-                .addComponent(zgony_poprzedni)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(zgony_nastepny)
-                .addGap(113, 113, 113)
-                .addComponent(zgony_wyjdz)
-                .addGap(20, 20, 20))
+                .addGroup(zgony_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(zgony_oknoLayout.createSequentialGroup()
+                        .addGap(165, 165, 165)
+                        .addComponent(zgony_poprzedni)
+                        .addGap(125, 125, 125)
+                        .addComponent(zgony_nastepny)
+                        .addGap(139, 139, 139)
+                        .addComponent(zgony_wyjdz))
+                    .addGroup(zgony_oknoLayout.createSequentialGroup()
+                        .addGap(159, 159, 159)
+                        .addComponent(zgony_tytul, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         zgony_oknoLayout.setVerticalGroup(
             zgony_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, zgony_oknoLayout.createSequentialGroup()
-                .addGroup(zgony_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(zgony_zdjecie, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 375, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(zgony_tytul, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(zgony_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(zgony_oknoLayout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(zgony_zdjecie, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(zgony_oknoLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 306, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addGroup(zgony_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(zgony_poprzedni)
                     .addComponent(zgony_nastepny)
@@ -334,30 +353,41 @@ public class okno_glowne extends javax.swing.JFrame {
             }
         });
 
+        wirusy_tytul.setEditable(false);
+        wirusy_tytul.setText("fdsf");
+
         javax.swing.GroupLayout wirusy_oknoLayout = new javax.swing.GroupLayout(wirusy_okno.getContentPane());
         wirusy_okno.getContentPane().setLayout(wirusy_oknoLayout);
         wirusy_oknoLayout.setHorizontalGroup(
             wirusy_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wirusy_oknoLayout.createSequentialGroup()
+                .addGroup(wirusy_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(wirusy_oknoLayout.createSequentialGroup()
+                        .addGap(133, 133, 133)
+                        .addComponent(wirusy_poprzedni))
+                    .addComponent(wirusy_zdjecie, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(wirusy_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(wirusy_oknoLayout.createSequentialGroup()
+                        .addComponent(wirusy_nastepny)
+                        .addGap(114, 114, 114)
+                        .addComponent(wirusy_zamknij))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(56, 56, 56))
             .addGroup(wirusy_oknoLayout.createSequentialGroup()
-                .addComponent(wirusy_zdjecie, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(wirusy_oknoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(wirusy_poprzedni)
-                .addGap(140, 140, 140)
-                .addComponent(wirusy_nastepny)
-                .addGap(115, 115, 115)
-                .addComponent(wirusy_zamknij)
-                .addGap(22, 22, 22))
+                .addGap(187, 187, 187)
+                .addComponent(wirusy_tytul, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         wirusy_oknoLayout.setVerticalGroup(
             wirusy_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wirusy_oknoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(wirusy_tytul, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(wirusy_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 373, Short.MAX_VALUE)
-                    .addComponent(wirusy_zdjecie, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(wirusy_zdjecie, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addGroup(wirusy_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wirusy_poprzedni)
@@ -819,7 +849,7 @@ public class okno_glowne extends javax.swing.JFrame {
         login.setText("Login: Administrator");
         logowanie.setVisible(false);
         zaloguj.setEnabled(false);
-        
+
     }//GEN-LAST:event_OK_logowanieActionPerformed
 
     private void zgony_wyjdzActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zgony_wyjdzActionPerformed
@@ -1060,7 +1090,7 @@ public class okno_glowne extends javax.swing.JFrame {
 
     private void zgony_nastepnyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zgony_nastepnyActionPerformed
         // TODO add your handling code here:
-        if (licznik_zgony > 18) {
+        if (licznik_zgony > 13) {
             licznik_zgony = 0;
         } else {
             licznik_zgony++;
@@ -1125,33 +1155,14 @@ public class okno_glowne extends javax.swing.JFrame {
             zgony_zdjecie.setIcon(obrazek24);
             zgony_opis.setText("Śmierć była dziwna11.");
         }
-        if (licznik_zgony == 15) {
-            zgony_zdjecie.setIcon(obrazek25);
-            zgony_opis.setText("Śmierć była dziwna12.");
-        }
-        if (licznik_zgony == 16) {
-            zgony_zdjecie.setIcon(obrazek26);
-            zgony_opis.setText("Śmierć była dziwna13.");
-        }
-        if (licznik_zgony == 17) {
-            zgony_zdjecie.setIcon(obrazek27);
-            zgony_opis.setText("Śmierć była dziwna14.");
-        }
-        if (licznik_zgony == 18) {
-            zgony_zdjecie.setIcon(obrazek28);
-            zgony_opis.setText("Śmierć była dziwna15.");
-        }
-        if (licznik_zgony == 19) {
-            zgony_zdjecie.setIcon(obrazek29);
-            zgony_opis.setText("Śmierć była dziwna16.");
-        }
+
 
     }//GEN-LAST:event_zgony_nastepnyActionPerformed
 
     private void zgony_poprzedniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zgony_poprzedniActionPerformed
         // TODO add your handling code here:
         if (licznik_zgony < 1) {
-            licznik_zgony = 19;
+            licznik_zgony = 14;
         } else {
             licznik_zgony--;
         }
@@ -1215,26 +1226,7 @@ public class okno_glowne extends javax.swing.JFrame {
             zgony_zdjecie.setIcon(obrazek24);
             zgony_opis.setText("Śmierć była dziwna11.");
         }
-        if (licznik_zgony == 15) {
-            zgony_zdjecie.setIcon(obrazek25);
-            zgony_opis.setText("Śmierć była dziwna12.");
-        }
-        if (licznik_zgony == 16) {
-            zgony_zdjecie.setIcon(obrazek26);
-            zgony_opis.setText("Śmierć była dziwna13.");
-        }
-        if (licznik_zgony == 17) {
-            zgony_zdjecie.setIcon(obrazek27);
-            zgony_opis.setText("Śmierć była dziwna14.");
-        }
-        if (licznik_zgony == 18) {
-            zgony_zdjecie.setIcon(obrazek28);
-            zgony_opis.setText("Śmierć była dziwna15.");
-        }
-        if (licznik_zgony == 19) {
-            zgony_zdjecie.setIcon(obrazek29);
-            zgony_opis.setText("Śmierć była dziwna16.");
-        }
+
 
     }//GEN-LAST:event_zgony_poprzedniActionPerformed
 
@@ -1251,47 +1243,65 @@ public class okno_glowne extends javax.swing.JFrame {
         } else {
             licznik_wirusy--;
         }
-        if (licznik_wirusy == 0) {
+         if (licznik_wirusy == 0) {
             wirusy_zdjecie.setIcon(obrazek0);
-            wirusy_opis.setText("Dziwny wirus1 wirus.");
+            wirusy_tytul.setText("Chlamydia psittaci");
+            wirusy_opis.setText("Drobnoustrój wywołujący ornitozę \ninaczej zwaną papuzicą. \nBakterie bezwzględnie\nwewnątrzkomórkowe. Posiadają\nlipopolisacharyd w ścianie \nkomórkowej. \nObjawy fazy drugiej to suchy kaszel, \nkrwioplucie i ból w klatce piersiowej.");
         }
         if (licznik_wirusy == 1) {
             wirusy_zdjecie.setIcon(obrazek1);
-            wirusy_opis.setText("Straszny wirus2 wirus.");
+            wirusy_tytul.setText("Candida albicans");
+            wirusy_opis.setText("Gatunek grzybów zaliczany do rzędu \ndrożdżaków (Saccharomycetes).\nGrzyb bezotoczkowy wywołujący \nzakażenia oportunistyczne u chorych z\nobniżoną odpornością. Infekcji\nsprzyja długotrwała\nantybiotykoterapia,  osłabienie\nodporności, sztuczne zastawki,\ncewniki, zabiegi inwazyjne etc.");
         }
         if (licznik_wirusy == 2) {
             wirusy_zdjecie.setIcon(obrazek2);
-            wirusy_opis.setText("Zabójczy wirus3 wirus.");
+            wirusy_tytul.setText("Treponema pallidum ssp. Pallidum");
+            wirusy_opis.setText("Bakteria spiralna, względnie\nbeztlenowa, wykazująca ruch.\nPosiada od 6 do 14 skrętów i\nosiąga średnicę ok. 0,1-0,5 μm i\ndługość od 5 do 15 μm.\nObligatoryjny pasożyt powodujący\nKiłę, przenoszoną przez drogę\npłciową.");
         }
         if (licznik_wirusy == 3) {
             wirusy_zdjecie.setIcon(obrazek3);
-            wirusy_opis.setText("Niegroźny wirus4 wirus.");
+            wirusy_tytul.setText("Yersinia pestis");
+            wirusy_opis.setText("Nieprzetrwalnikująca bakteria\nGram ujemna z rodzaju Yersinia,\no kształcie pałeczki będąca\nczynnikiem etiologicznym dżumy.\nBrak rzęsek i tym samym\nzdolności ruchu. Wrażliwa na\ndziałanie wysokiej temperatury.\nRezerwuarem są zwierzęta.");
         }
         if (licznik_wirusy == 4) {
             wirusy_zdjecie.setIcon(obrazek4);
-            wirusy_opis.setText("Biały wirus1.");
+            wirusy_tytul.setText("Borellia burgdoferi");
+            wirusy_opis.setText("Mikroaerofilna bakteria Gram-\nujemna o kształcie krętka.\nŚrednica  0,3-0,5 µm i długość\n20-30 µm.\n"
+                    + "Genom składa się z 90725 par\nzasad i zawiera 853 geny.\n"
+                    + "Rezerwuarem są małe i średnie\nssaki, natomiast wektorem\ntransmisji choroby jest kleszcz z\nrodzaju Ixodes.\n"
+                    + "Powoduje chorobę zwaną\nboreliozą.");
         }
         if (licznik_wirusy == 5) {
             wirusy_zdjecie.setIcon(obrazek5);
-            wirusy_opis.setText("Biały wirus2.");
+            wirusy_tytul.setText("Human Immunodeficiency Virus");
+            wirusy_opis.setText("Wirus z rodzaju lentiwirusów, z\nrodziny retrowirusów,\nwywołujący AIDS. Dotychczas\npoznano dwa jego typy: HIV-1\ni HIV-2.\n"
+                    + "Wirus ten atakuje\ngłównie pomocnicze limfocyty T.");
         }
         if (licznik_wirusy == 6) {
             wirusy_zdjecie.setIcon(obrazek6);
-            wirusy_opis.setText("Biały wirus3.");
+            wirusy_tytul.setText("Rabies");
+            wirusy_opis.setText("Wirus z rodzaju Lyssavirus, z rodziny\nRhabdoviridae. Odporny na działanie\nczynników fizycznych i chemicznych.\n"
+                    + "Po ukąszeniu człowieka przez zwierzę,\nwirus dostaje się do mózgu, gdzie\npowoduje śmiertelne zmiany w ważnych\nośrodkach życiowych.\n"
+                    + "Główną przyczyna śmierci jest\nniewydolność oddechowa.");
         }
         if (licznik_wirusy == 7) {
             wirusy_zdjecie.setIcon(obrazek7);
-            wirusy_opis.setText("Biały wirus4.");
+            wirusy_tytul.setText("Ebola virus");
+            wirusy_opis.setText("Takson wirusów z gatunku\nZaire Ebolavirus, z rodzaju Ebolavirus i rodziny\nFiloviridae.\n"
+                    + "Powoduje gorączkę krwotoczną Ebola.\n"
+                    + "Okres inkubacji choroby wynosi najczęści\nod 8 do 10 dni. Pierwsze objawy to\nwysoka gorączka, bóle głowy, mięśni i\ngardła oraz znaczne osłabienie.\n"
+                    + "Prowadzi do śmierci nwykrwawienia.");
         }
         if (licznik_wirusy == 8) {
             wirusy_zdjecie.setIcon(obrazek8);
-            wirusy_opis.setText("Biały wirus5.");
+            wirusy_tytul.setText("Trichinella spiralis");
+            wirusy_opis.setText("Gatunek pasożytniczego nicienia z rodziny\nTrichinellidae. Jest jednym z najgroźniejszych\npasożytów człowieka – wywołuje chorobę\nwłośnicę (trychinozę), która może mieć ciężki\nprzebieg, kończący się niekiedy śmiercią.");
         }
         if (licznik_wirusy == 9) {
             wirusy_zdjecie.setIcon(obrazek9);
-            wirusy_opis.setText("Biały wirus6.");
+            wirusy_tytul.setText("Fasciola hepatica");
+            wirusy_opis.setText("Przywra o złożonym cyklu życiowym.\nForma dojrzała pasożytuje w przewodach\nżółciowych wątroby. Wywołuje chorobę zwaną\nfascjolozą. Nie może występować w\nformie wolno żyjącej, jedynie w\nciele swojego żywiciela.");
         }
-   
 
 
     }//GEN-LAST:event_wirusy_poprzedniActionPerformed
@@ -1303,45 +1313,64 @@ public class okno_glowne extends javax.swing.JFrame {
         } else {
             licznik_wirusy++;
         }
-              if (licznik_wirusy == 0) {
+        if (licznik_wirusy == 0) {
             wirusy_zdjecie.setIcon(obrazek0);
-            wirusy_opis.setText("Dziwny wirus1 wirus.");
+            wirusy_tytul.setText("Chlamydia psittaci");
+            wirusy_opis.setText("Drobnoustrój wywołujący ornitozę \ninaczej zwaną papuzicą. \nBakterie bezwzględnie\nwewnątrzkomórkowe. Posiadają\nlipopolisacharyd w ścianie \nkomórkowej. \nObjawy fazy drugiej to suchy kaszel, \nkrwioplucie i ból w klatce piersiowej.");
         }
         if (licznik_wirusy == 1) {
             wirusy_zdjecie.setIcon(obrazek1);
-            wirusy_opis.setText("Straszny wirus2 wirus.");
+            wirusy_tytul.setText("Candida albicans");
+            wirusy_opis.setText("Gatunek grzybów zaliczany do rzędu \ndrożdżaków (Saccharomycetes).\nGrzyb bezotoczkowy wywołujący \nzakażenia oportunistyczne u chorych z\nobniżoną odpornością. Infekcji\nsprzyja długotrwała\nantybiotykoterapia,  osłabienie\nodporności, sztuczne zastawki,\ncewniki, zabiegi inwazyjne etc.");
         }
         if (licznik_wirusy == 2) {
             wirusy_zdjecie.setIcon(obrazek2);
-            wirusy_opis.setText("Zabójczy wirus3 wirus.");
+            wirusy_tytul.setText("Treponema pallidum ssp. Pallidum");
+            wirusy_opis.setText("Bakteria spiralna, względnie\nbeztlenowa, wykazująca ruch.\nPosiada od 6 do 14 skrętów i\nosiąga średnicę ok. 0,1-0,5 μm i\ndługość od 5 do 15 μm.\nObligatoryjny pasożyt powodujący\nKiłę, przenoszoną przez drogę\npłciową.");
         }
         if (licznik_wirusy == 3) {
             wirusy_zdjecie.setIcon(obrazek3);
-            wirusy_opis.setText("Niegroźny wirus4 wirus.");
+            wirusy_tytul.setText("Yersinia pestis");
+            wirusy_opis.setText("Nieprzetrwalnikująca bakteria\nGram ujemna z rodzaju Yersinia,\no kształcie pałeczki będąca\nczynnikiem etiologicznym dżumy.\nBrak rzęsek i tym samym\nzdolności ruchu. Wrażliwa na\ndziałanie wysokiej temperatury.\nRezerwuarem są zwierzęta.");
         }
         if (licznik_wirusy == 4) {
             wirusy_zdjecie.setIcon(obrazek4);
-            wirusy_opis.setText("Biały wirus1.");
+            wirusy_tytul.setText("Borellia burgdoferi");
+            wirusy_opis.setText("Mikroaerofilna bakteria Gram-\nujemna o kształcie krętka.\nŚrednica  0,3-0,5 µm i długość\n20-30 µm.\n"
+                    + "Genom składa się z 90725 par\nzasad i zawiera 853 geny.\n"
+                    + "Rezerwuarem są małe i średnie\nssaki, natomiast wektorem\ntransmisji choroby jest kleszcz z\nrodzaju Ixodes.\n"
+                    + "Powoduje chorobę zwaną\nboreliozą.");
         }
         if (licznik_wirusy == 5) {
             wirusy_zdjecie.setIcon(obrazek5);
-            wirusy_opis.setText("Biały wirus2.");
+            wirusy_tytul.setText("Human Immunodeficiency Virus");
+            wirusy_opis.setText("Wirus z rodzaju lentiwirusów, z\nrodziny retrowirusów,\nwywołujący AIDS. Dotychczas\npoznano dwa jego typy: HIV-1\ni HIV-2.\n"
+                    + "Wirus ten atakuje\ngłównie pomocnicze limfocyty T.");
         }
         if (licznik_wirusy == 6) {
             wirusy_zdjecie.setIcon(obrazek6);
-            wirusy_opis.setText("Biały wirus3.");
+            wirusy_tytul.setText("Rabies");
+            wirusy_opis.setText("Wirus z rodzaju Lyssavirus, z rodziny\nRhabdoviridae. Odporny na działanie\nczynników fizycznych i chemicznych.\n"
+                    + "Po ukąszeniu człowieka przez zwierzę,\nwirus dostaje się do mózgu, gdzie\npowoduje śmiertelne zmiany w ważnych\nośrodkach życiowych.\n"
+                    + "Główną przyczyna śmierci jest\nniewydolność oddechowa.");
         }
         if (licznik_wirusy == 7) {
             wirusy_zdjecie.setIcon(obrazek7);
-            wirusy_opis.setText("Biały wirus4.");
+            wirusy_tytul.setText("Ebola virus");
+            wirusy_opis.setText("Takson wirusów z gatunku\nZaire Ebolavirus, z rodzaju Ebolavirus i rodziny\nFiloviridae.\n"
+                    + "Powoduje gorączkę krwotoczną Ebola.\n"
+                    + "Okres inkubacji choroby wynosi najczęści\nod 8 do 10 dni. Pierwsze objawy to\nwysoka gorączka, bóle głowy, mięśni i\ngardła oraz znaczne osłabienie.\n"
+                    + "Prowadzi do śmierci nwykrwawienia.");
         }
         if (licznik_wirusy == 8) {
             wirusy_zdjecie.setIcon(obrazek8);
-            wirusy_opis.setText("Biały wirus5.");
+            wirusy_tytul.setText("Trichinella spiralis");
+            wirusy_opis.setText("Gatunek pasożytniczego nicienia z rodziny\nTrichinellidae. Jest jednym z najgroźniejszych\npasożytów człowieka – wywołuje chorobę\nwłośnicę (trychinozę), która może mieć ciężki\nprzebieg, kończący się niekiedy śmiercią.");
         }
         if (licznik_wirusy == 9) {
             wirusy_zdjecie.setIcon(obrazek9);
-            wirusy_opis.setText("Biały wirus6.");
+            wirusy_tytul.setText("Fasciola hepatica");
+            wirusy_opis.setText("Przywra o złożonym cyklu życiowym.\nForma dojrzała pasożytuje w przewodach\nżółciowych wątroby. Wywołuje chorobę zwaną\nfascjolozą. Nie może występować w\nformie wolno żyjącej, jedynie w\nciele swojego żywiciela.");
         }
     }//GEN-LAST:event_wirusy_nastepnyActionPerformed
 
@@ -1489,6 +1518,7 @@ public class okno_glowne extends javax.swing.JFrame {
     private javax.swing.JFrame wirusy_okno;
     private javax.swing.JTextArea wirusy_opis;
     private javax.swing.JButton wirusy_poprzedni;
+    private javax.swing.JTextField wirusy_tytul;
     private javax.swing.JButton wirusy_zamknij;
     private javax.swing.JLabel wirusy_zdjecie;
     private javax.swing.JButton zaloguj;
@@ -1505,6 +1535,7 @@ public class okno_glowne extends javax.swing.JFrame {
     private javax.swing.JFrame zgony_okno;
     private javax.swing.JTextArea zgony_opis;
     private javax.swing.JButton zgony_poprzedni;
+    private javax.swing.JTextField zgony_tytul;
     private javax.swing.JButton zgony_wyjdz;
     private javax.swing.JLabel zgony_zdjecie;
     // End of variables declaration//GEN-END:variables
