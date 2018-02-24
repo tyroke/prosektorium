@@ -68,8 +68,14 @@ public class okno_glowne extends javax.swing.JFrame {
         Font font2 = new Font("SansSerif", Font.PLAIN, 17);
         zgony_tytul.setFont(font1);
         zgony_opis.setFont(font2);
-        zgony_tytul.setText("Nr 23504");
-        zgony_opis.setText("Śmierć była krótka.");
+        zgony_tytul.setText("Nr 14101");
+        zgony_opis.setText("Mężczyzna 34 l.\n"
+                + "wzrost: 184cm\n"
+                + "waga: 90kg\n"
+                + "\n"
+                + "Przyczyna zgonu:\n"
+                + "Dwie rany kłute w klatce piersiowej na\nwysokości IV i V żebra, po lewej stronie ciała.\n"
+                + "Dodatkowe ślady na ciele wskazują na\nudział w bójce (zasinienia wokół knykci obu\ndłoni, ślady uderzeń na twarzy oraz\ngłowie, otarty naskórek z rąk i twarzy, naskórek\nniezidentyfikowanej osoby pod paznokciami).");
         wirusy_zdjecie.setIcon(obrazek0);
         zgony_zdjecie.setIcon(obrazek10);
         wirusy_tytul.setFont(font1);
@@ -1097,63 +1103,168 @@ public class okno_glowne extends javax.swing.JFrame {
         }
         if (licznik_zgony == 0) {
             zgony_zdjecie.setIcon(obrazek10);
-            zgony_opis.setText("Śmierć była krótka.");
+            zgony_tytul.setText("Nr 14101");
+            zgony_opis.setText("Mężczyzna 34 l.\n"
+                    + "wzrost: 184cm\n"
+                    + "waga: 90kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Dwie rany kłute w klatce piersiowej na\nwysokości IV i V żebra, po lewej stronie ciała.\n"
+                    + "Dodatkowe ślady na ciele wskazują na\nudział w bójce (zasinienia wokół knykci obu\ndłoni, ślady uderzeń na twarzy oraz\ngłowie, otarty naskórek z rąk i twarzy, naskórek\nniezidentyfikowanej osoby pod paznokciami).");
         }
         if (licznik_zgony == 1) {
             zgony_zdjecie.setIcon(obrazek11);
-            zgony_opis.setText("Śmierć była bolesna.");
+            zgony_tytul.setText("Nr 86564");
+            zgony_opis.setText("Kobieta 50 l.\n"
+                    + "wzrost: 168cm\n"
+                    + "waga: 87kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Ostry zawał serca. Przyczyna etiologiczna\nnieznana. Większych zmian miażdżycowych nie\nstwierdzono. Obecność we krwi inhibitorów\nonwertaz"
+                    + "angiotensyny (ACEI) oraz\nsubstancji pomocniczych.");
         }
         if (licznik_zgony == 2) {
             zgony_zdjecie.setIcon(obrazek12);
-            zgony_opis.setText("Śmierć była straszna.");
+            zgony_tytul.setText("Nr 64812");
+            zgony_opis.setText("Mężczyzna 62 l.\n"
+                    + "wzrost: 178cm\n"
+                    + "waga: 86kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Odmrożenia III i IV stopnia ( IIIst.\n70% ciała, IVst. dystalne części ciała).\n"
+                    + "Obecność alkoholu we krwi (2,5 ‰)\n"
+                    + "Dodatkowe ślady:\n"
+                    + "Liczne blizny na całym ciele (głównie\ntwarz, stopy, podudzia, dłonie i przedramiona),\nzaawansowana wszawica i zmiany grzybicze w\nobrębie kończyn dolnych i krocza.");
         }
         if (licznik_zgony == 3) {
             zgony_zdjecie.setIcon(obrazek13);
-            zgony_opis.setText("Śmierć była szybka.");
+            zgony_tytul.setText("Nr 56476");
+            zgony_opis.setText("Kobieta 21 l.\n"
+                    + "wzrost: 176cm\n"
+                    + "waga: 65kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Zatrzymanie akcji serca, niewydolność\nwielonarządowa. Wysokie stężenie\nchlordiazepoksydu oraz alkoholu we krwi (2‰).\n"
+                    + "Dodatkowe obserwacje:\nNiewielkie stężenia innych substancji\npsychotropowych wskazujących na długotrwałe\nleczenie farmakologiczne.");
         }
         if (licznik_zgony == 4) {
             zgony_zdjecie.setIcon(obrazek14);
-            zgony_opis.setText("Śmierć była dziwna1.");
+            zgony_tytul.setText("Nr 86949");
+            zgony_opis.setText("Kobieta 32 l.\n"
+                    + "wzrost: 170cm\n"
+                    + "waga: 70kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Rozległe złamania, przebicie ściany żołądka\nw okolicy dna, rozerwanie lewego płuca,\npęknięcie czaszki w okolicy potyliczne,\nzłamanie 3 kręgów szyjnych ( C3, C4 i C5).\n"
+                    + "Liczne otarcia, stłuczenia i zadrapania.");
         }
         if (licznik_zgony == 5) {
             zgony_zdjecie.setIcon(obrazek15);
-            zgony_opis.setText("Śmierć była dziwna2.");
+            zgony_tytul.setText("Nr 17953");
+            zgony_opis.setText("Mężczyzna 43 l.\n"
+                    + "wzrost: 196cm\n"
+                    + "waga: 98kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Liczne ogniska zapalne spowodowane wirusem\nz rodziny Rhabdoviridae."
+                    + " Liczne zmiany\npatologiczne w obu płucach. "
+                    + "Niewydolnść\noddechowa.");
         }
         if (licznik_zgony == 6) {
             zgony_zdjecie.setIcon(obrazek16);
-            zgony_opis.setText("Śmierć była dziwna3.");
+            zgony_tytul.setText("Nr 23504");
+            zgony_opis.setText("Mężczyzna 28 l.\n"
+                    + "wzrost: 186cm\n"
+                    + "waga: 89kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu: \n"
+                    + "Wykrwawienie. "
+                    + "Rana postrzałowa przedsionka\njamy ustnej, wyrostka zębodołowego żuchwy,\ngardła, stoku i łuski k. potylicznej, móżdżku i\nok. karkowej L. "
+                    + "Dwie rany postrzałowe\njamy brzusznej. ");
         }
         if (licznik_zgony == 7) {
             zgony_zdjecie.setIcon(obrazek17);
-            zgony_opis.setText("Śmierć była dziwna4.");
+            zgony_tytul.setText("Nr 28050");
+            zgony_opis.setText("Kobieta 68 l.\n"
+                    + "wzrost: 165cm\n"
+                    + "waga: 76kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Ostry zawał serca. "
+                    + "Zmiany\nzatorowo-zakrzepowe w tętnicach wieńcowych.\n"
+                    + "Widoczne wady zastawek serca.");
         }
         if (licznik_zgony == 8) {
             zgony_zdjecie.setIcon(obrazek18);
-            zgony_opis.setText("Śmierć była dziwna5.");
+            zgony_tytul.setText("Nr 74282");
+            zgony_opis.setText("Mężczyzna 65 l.\n"
+                    + "wzrost: 172cm\n"
+                    + "waga: 88kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Nowotwór prawego płuca. "
+                    + "Obecność guza\nPancoasta w górnej części prawego płuca\nnaciekający na elementy splotu barkowego.");
         }
         if (licznik_zgony == 9) {
             zgony_zdjecie.setIcon(obrazek19);
-            zgony_opis.setText("Śmierć była dziwna6.");
+            zgony_tytul.setText("Nr 88641");
+            zgony_opis.setText("Kobieta 23 l.\n"
+                    + "wzrost: 166cm\n"
+                    + "waga: 62kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Zaczadzenie organizmu. Obecność cząsteczek\ntlenku węgla w układzie oddechowym.");
         }
         if (licznik_zgony == 10) {
             zgony_zdjecie.setIcon(obrazek20);
-            zgony_opis.setText("Śmierć była dziwna7.");
+            zgony_tytul.setText("Nr 21370");
+            zgony_opis.setText("Mężczyzna 25 l.\n"
+                    + "wzrost: 174cm\n"
+                    + "waga: 72kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Przedawkowanie. Duże stężenie dekstrometorfanu\nwe krwi.");
         }
         if (licznik_zgony == 11) {
             zgony_zdjecie.setIcon(obrazek21);
-            zgony_opis.setText("Śmierć była dziwna8.");
+            zgony_tytul.setText("Nr 30682");
+            zgony_opis.setText("Mężczyzna 45 l.\n"
+                    + "wzrost: 174cm\n"
+                    + "waga: 85kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Liczne obrażenia spowodowane wypadkiem\nkomunikacyjnym. "
+                    + "Obecność odłamków\nszkła w klatce piersiowej, prawym\nudzie i twarzy.");
         }
         if (licznik_zgony == 12) {
             zgony_zdjecie.setIcon(obrazek22);
-            zgony_opis.setText("Śmierć była dziwna9.");
+            zgony_tytul.setText("Nr 55766");
+            zgony_opis.setText("Mężczyzna 54 l.\n"
+                    + "wzrost: 173cm\n"
+                    + "waga: 86kg\n"
+                    + "\n"
+                    + "Przyczyna śmierci:\n"
+                    + "Ostra niewydolność nerek. Zwiększone stężenie\nkreatyniny we krwi.");
         }
         if (licznik_zgony == 13) {
             zgony_zdjecie.setIcon(obrazek23);
-            zgony_opis.setText("Śmierć była dziwna10.");
+            zgony_tytul.setText("Nr 90579");
+            zgony_opis.setText("Kobieta 34 l.\n"
+                    + "wzrost: 160cm \n"
+                    + "waga: 61kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Miażdżyca. Duże stężenie cholesterolu we\nkrwi. Zatkanie naczyń włosowatych wątroby.");
         }
         if (licznik_zgony == 14) {
             zgony_zdjecie.setIcon(obrazek24);
-            zgony_opis.setText("Śmierć była dziwna11.");
+            zgony_tytul.setText("Nr 59447");
+            zgony_opis.setText("Mężczyzna 54 l.\n"
+                    + "wzrost: 174cm\n"
+                    + "waga: 88kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Liczne obrażenia spowodowane potrąceniem w\nwypadku komunikacyjnym. Złamania kości długich\nkończyn dolnych, żeber V- XII.");
         }
 
 
@@ -1168,63 +1279,168 @@ public class okno_glowne extends javax.swing.JFrame {
         }
         if (licznik_zgony == 0) {
             zgony_zdjecie.setIcon(obrazek10);
-            zgony_opis.setText("Śmierć była krótka.");
+            zgony_tytul.setText("Nr 14101");
+            zgony_opis.setText("Mężczyzna 34 l.\n"
+                    + "wzrost: 184cm\n"
+                    + "waga: 90kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Dwie rany kłute w klatce piersiowej na\nwysokości IV i V żebra, po lewej stronie ciała.\n"
+                    + "Dodatkowe ślady na ciele wskazują na\nudział w bójce (zasinienia wokół knykci obu\ndłoni, ślady uderzeń na twarzy oraz\ngłowie, otarty naskórek z rąk i twarzy, naskórek\nniezidentyfikowanej osoby pod paznokciami).");
         }
         if (licznik_zgony == 1) {
             zgony_zdjecie.setIcon(obrazek11);
-            zgony_opis.setText("Śmierć była bolesna.");
+            zgony_tytul.setText("Nr 86564");
+            zgony_opis.setText("Kobieta 50 l.\n"
+                    + "wzrost: 168cm\n"
+                    + "waga: 87kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Ostry zawał serca. Przyczyna etiologiczna\nnieznana. Większych zmian miażdżycowych nie\nstwierdzono. Obecność we krwi inhibitorów\nonwertaz"
+                    + "angiotensyny (ACEI) oraz\nsubstancji pomocniczych.");
         }
         if (licznik_zgony == 2) {
             zgony_zdjecie.setIcon(obrazek12);
-            zgony_opis.setText("Śmierć była straszna.");
+            zgony_tytul.setText("Nr 64812");
+            zgony_opis.setText("Mężczyzna 62 l.\n"
+                    + "wzrost: 178cm\n"
+                    + "waga: 86kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Odmrożenia III i IV stopnia ( IIIst.\n70% ciała, IVst. dystalne części ciała).\n"
+                    + "Obecność alkoholu we krwi (2,5 ‰)\n"
+                    + "Dodatkowe ślady:\n"
+                    + "Liczne blizny na całym ciele (głównie\ntwarz, stopy, podudzia, dłonie i przedramiona),\nzaawansowana wszawica i zmiany grzybicze w\nobrębie kończyn dolnych i krocza.");
         }
         if (licznik_zgony == 3) {
             zgony_zdjecie.setIcon(obrazek13);
-            zgony_opis.setText("Śmierć była szybka.");
+            zgony_tytul.setText("Nr 56476");
+            zgony_opis.setText("Kobieta 21 l.\n"
+                    + "wzrost: 176cm\n"
+                    + "waga: 65kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Zatrzymanie akcji serca, niewydolność\nwielonarządowa. Wysokie stężenie\nchlordiazepoksydu oraz alkoholu we krwi (2‰).\n"
+                    + "Dodatkowe obserwacje:\nNiewielkie stężenia innych substancji\npsychotropowych wskazujących na długotrwałe\nleczenie farmakologiczne.");
         }
         if (licznik_zgony == 4) {
             zgony_zdjecie.setIcon(obrazek14);
-            zgony_opis.setText("Śmierć była dziwna1.");
+            zgony_tytul.setText("Nr 86949");
+            zgony_opis.setText("Kobieta 32 l.\n"
+                    + "wzrost: 170cm\n"
+                    + "waga: 70kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Rozległe złamania, przebicie ściany żołądka\nw okolicy dna, rozerwanie lewego płuca,\npęknięcie czaszki w okolicy potyliczne,\nzłamanie 3 kręgów szyjnych ( C3, C4 i C5).\n"
+                    + "Liczne otarcia, stłuczenia i zadrapania.");
         }
         if (licznik_zgony == 5) {
             zgony_zdjecie.setIcon(obrazek15);
-            zgony_opis.setText("Śmierć była dziwna2.");
+            zgony_tytul.setText("Nr 17953");
+            zgony_opis.setText("Mężczyzna 43 l.\n"
+                    + "wzrost: 196cm\n"
+                    + "waga: 98kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Liczne ogniska zapalne spowodowane wirusem\nz rodziny Rhabdoviridae."
+                    + " Liczne zmiany\npatologiczne w obu płucach. "
+                    + "Niewydolnść\noddechowa.");
         }
         if (licznik_zgony == 6) {
             zgony_zdjecie.setIcon(obrazek16);
-            zgony_opis.setText("Śmierć była dziwna3.");
+            zgony_tytul.setText("Nr 23504");
+            zgony_opis.setText("Mężczyzna 28 l.\n"
+                    + "wzrost: 186cm\n"
+                    + "waga: 89kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu: \n"
+                    + "Wykrwawienie. "
+                    + "Rana postrzałowa przedsionka\njamy ustnej, wyrostka zębodołowego żuchwy,\ngardła, stoku i łuski k. potylicznej, móżdżku i\nok. karkowej L. "
+                    + "Dwie rany postrzałowe\njamy brzusznej. ");
         }
         if (licznik_zgony == 7) {
             zgony_zdjecie.setIcon(obrazek17);
-            zgony_opis.setText("Śmierć była dziwna4.");
+            zgony_tytul.setText("Nr 28050");
+            zgony_opis.setText("Kobieta 68 l.\n"
+                    + "wzrost: 165cm\n"
+                    + "waga: 76kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Ostry zawał serca. "
+                    + "Zmiany\nzatorowo-zakrzepowe w tętnicach wieńcowych.\n"
+                    + "Widoczne wady zastawek serca.");
         }
         if (licznik_zgony == 8) {
             zgony_zdjecie.setIcon(obrazek18);
-            zgony_opis.setText("Śmierć była dziwna5.");
+            zgony_tytul.setText("Nr 74282");
+            zgony_opis.setText("Mężczyzna 65 l.\n"
+                    + "wzrost: 172cm\n"
+                    + "waga: 88kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Nowotwór prawego płuca. "
+                    + "Obecność guza\nPancoasta w górnej części prawego płuca\nnaciekający na elementy splotu barkowego.");
         }
         if (licznik_zgony == 9) {
             zgony_zdjecie.setIcon(obrazek19);
-            zgony_opis.setText("Śmierć była dziwna6.");
+            zgony_tytul.setText("Nr 88641");
+            zgony_opis.setText("Kobieta 23 l.\n"
+                    + "wzrost: 166cm\n"
+                    + "waga: 62kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Zaczadzenie organizmu. Obecność cząsteczek\ntlenku węgla w układzie oddechowym.");
         }
         if (licznik_zgony == 10) {
             zgony_zdjecie.setIcon(obrazek20);
-            zgony_opis.setText("Śmierć była dziwna7.");
+            zgony_tytul.setText("Nr 21370");
+            zgony_opis.setText("Mężczyzna 25 l.\n"
+                    + "wzrost: 174cm\n"
+                    + "waga: 72kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Przedawkowanie. Duże stężenie dekstrometorfanu\nwe krwi.");
         }
         if (licznik_zgony == 11) {
             zgony_zdjecie.setIcon(obrazek21);
-            zgony_opis.setText("Śmierć była dziwna8.");
+            zgony_tytul.setText("Nr 30682");
+            zgony_opis.setText("Mężczyzna 45 l.\n"
+                    + "wzrost: 174cm\n"
+                    + "waga: 85kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Liczne obrażenia spowodowane wypadkiem\nkomunikacyjnym. "
+                    + "Obecność odłamków\nszkła w klatce piersiowej, prawym\nudzie i twarzy.");
         }
         if (licznik_zgony == 12) {
             zgony_zdjecie.setIcon(obrazek22);
-            zgony_opis.setText("Śmierć była dziwna9.");
+            zgony_tytul.setText("Nr 55766");
+            zgony_opis.setText("Mężczyzna 54 l.\n"
+                    + "wzrost: 173cm\n"
+                    + "waga: 86kg\n"
+                    + "\n"
+                    + "Przyczyna śmierci:\n"
+                    + "Ostra niewydolność nerek. Zwiększone stężenie\nkreatyniny we krwi.");
         }
         if (licznik_zgony == 13) {
             zgony_zdjecie.setIcon(obrazek23);
-            zgony_opis.setText("Śmierć była dziwna10.");
+            zgony_tytul.setText("Nr 90579");
+            zgony_opis.setText("Kobieta 34 l.\n"
+                    + "wzrost: 160cm \n"
+                    + "waga: 61kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Miażdżyca. Duże stężenie cholesterolu we\nkrwi. Zatkanie naczyń włosowatych wątroby.");
         }
         if (licznik_zgony == 14) {
             zgony_zdjecie.setIcon(obrazek24);
-            zgony_opis.setText("Śmierć była dziwna11.");
+            zgony_tytul.setText("Nr 59447");
+            zgony_opis.setText("Mężczyzna 54 l.\n"
+                    + "wzrost: 174cm\n"
+                    + "waga: 88kg\n"
+                    + "\n"
+                    + "Przyczyna zgonu:\n"
+                    + "Liczne obrażenia spowodowane potrąceniem w\nwypadku komunikacyjnym. Złamania kości długich\nkończyn dolnych, żeber V- XII.");
         }
 
 
@@ -1243,7 +1459,7 @@ public class okno_glowne extends javax.swing.JFrame {
         } else {
             licznik_wirusy--;
         }
-         if (licznik_wirusy == 0) {
+        if (licznik_wirusy == 0) {
             wirusy_zdjecie.setIcon(obrazek0);
             wirusy_tytul.setText("Chlamydia psittaci");
             wirusy_opis.setText("Drobnoustrój wywołujący ornitozę \ninaczej zwaną papuzicą. \nBakterie bezwzględnie\nwewnątrzkomórkowe. Posiadają\nlipopolisacharyd w ścianie \nkomórkowej. \nObjawy fazy drugiej to suchy kaszel, \nkrwioplucie i ból w klatce piersiowej.");
@@ -1289,8 +1505,8 @@ public class okno_glowne extends javax.swing.JFrame {
             wirusy_tytul.setText("Ebola virus");
             wirusy_opis.setText("Takson wirusów z gatunku\nZaire Ebolavirus, z rodzaju Ebolavirus i rodziny\nFiloviridae.\n"
                     + "Powoduje gorączkę krwotoczną Ebola.\n"
-                    + "Okres inkubacji choroby wynosi najczęści\nod 8 do 10 dni. Pierwsze objawy to\nwysoka gorączka, bóle głowy, mięśni i\ngardła oraz znaczne osłabienie.\n"
-                    + "Prowadzi do śmierci nwykrwawienia.");
+                    + "Okres inkubacji choroby wynosi najczęściej\nod 8 do 10 dni. Pierwsze objawy to\nwysoka gorączka, bóle głowy, mięśni i\ngardła oraz znaczne osłabienie.\n"
+                    + "Prowadzi do śmierci i wykrwawienia.");
         }
         if (licznik_wirusy == 8) {
             wirusy_zdjecie.setIcon(obrazek8);
@@ -1359,8 +1575,8 @@ public class okno_glowne extends javax.swing.JFrame {
             wirusy_tytul.setText("Ebola virus");
             wirusy_opis.setText("Takson wirusów z gatunku\nZaire Ebolavirus, z rodzaju Ebolavirus i rodziny\nFiloviridae.\n"
                     + "Powoduje gorączkę krwotoczną Ebola.\n"
-                    + "Okres inkubacji choroby wynosi najczęści\nod 8 do 10 dni. Pierwsze objawy to\nwysoka gorączka, bóle głowy, mięśni i\ngardła oraz znaczne osłabienie.\n"
-                    + "Prowadzi do śmierci nwykrwawienia.");
+                    + "Okres inkubacji choroby wynosi najczęściej\nod 8 do 10 dni. Pierwsze objawy to\nwysoka gorączka, bóle głowy, mięśni i\ngardła oraz znaczne osłabienie.\n"
+                    + "Prowadzi do śmierci i wykrwawienia.");
         }
         if (licznik_wirusy == 8) {
             wirusy_zdjecie.setIcon(obrazek8);
