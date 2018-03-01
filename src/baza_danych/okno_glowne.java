@@ -51,6 +51,8 @@ public class okno_glowne extends javax.swing.JFrame {
 
     String haslo_haslo = "";
     String prawdziwe_haslo = "18221";
+    boolean strzalki_przycisk = true;
+    boolean klawiatura_przycisk = true;
     int[] zamknij_haslo2 = new int[5];
     int licznik_zamknij = 0;
     char znak;
@@ -64,10 +66,12 @@ public class okno_glowne extends javax.swing.JFrame {
         zamknij_haslo2[2] = 2;
         zamknij_haslo2[3] = 1;
         initComponents();
-        Font font1 = new Font("SansSerif", Font.BOLD, 20);
-        Font font2 = new Font("SansSerif", Font.PLAIN, 17);
+        Font font1 = new Font("SansSerif", Font.BOLD, 32);
+        Font font2 = new Font("SansSerif", Font.PLAIN, 26);
+        Font font3 = new Font("SansSerif", Font.PLAIN, 20);
         zgony_tytul.setFont(font1);
         zgony_opis.setFont(font2);
+        komunikat_tekst.setFont(font3);
         zgony_tytul.setText("Nr 14101");
         zgony_opis.setText("Mężczyzna 34 l.\n"
                 + "wzrost: 184cm\n"
@@ -186,9 +190,11 @@ public class okno_glowne extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(login_logowanie, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                .addComponent(OK_logowanie)
-                .addGap(36, 36, 36))
+                .addContainerGap(125, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, logowanieLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(OK_logowanie, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(56, 56, 56))
         );
         logowanieLayout.setVerticalGroup(
             logowanieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -196,16 +202,17 @@ public class okno_glowne extends javax.swing.JFrame {
                 .addGap(58, 58, 58)
                 .addGroup(logowanieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(login_logowanie, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(OK_logowanie, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(84, Short.MAX_VALUE))
+                    .addComponent(login_logowanie, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(OK_logowanie, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         komunikat.setAlwaysOnTop(true);
         komunikat.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
-        komunikat.setLocation(new java.awt.Point(300, 50));
+        komunikat.setLocation(new java.awt.Point(500, 200));
         komunikat.setUndecorated(true);
-        komunikat.setSize(new java.awt.Dimension(400, 229));
+        komunikat.setSize(new java.awt.Dimension(507, 307));
 
         komunikat_tekst.setEditable(false);
         komunikat_tekst.setColumns(20);
@@ -225,31 +232,31 @@ public class okno_glowne extends javax.swing.JFrame {
             komunikatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(komunikatLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addComponent(jScrollPane2)
+                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, komunikatLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(komunikat_zamknij)
-                .addGap(41, 41, 41))
+                .addContainerGap(338, Short.MAX_VALUE)
+                .addComponent(komunikat_zamknij, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(61, 61, 61))
         );
         komunikatLayout.setVerticalGroup(
             komunikatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(komunikatLayout.createSequentialGroup()
-                .addGap(73, 73, 73)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                .addComponent(komunikat_zamknij)
-                .addGap(25, 25, 25))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(komunikat_zamknij, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(68, 68, 68))
         );
 
         zgony_okno.setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         zgony_okno.setTitle("Lista zgonów");
         zgony_okno.setAlwaysOnTop(true);
         zgony_okno.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
-        zgony_okno.setLocation(new java.awt.Point(300, 140));
+        zgony_okno.setLocation(new java.awt.Point(175, 80));
         zgony_okno.setUndecorated(true);
         zgony_okno.setResizable(false);
-        zgony_okno.setSize(new java.awt.Dimension(770, 475));
+        zgony_okno.setSize(new java.awt.Dimension(1000, 700));
 
         zgony_poprzedni.setText("Poprzedni");
         zgony_poprzedni.addActionListener(new java.awt.event.ActionListener() {
@@ -287,50 +294,49 @@ public class okno_glowne extends javax.swing.JFrame {
         zgony_oknoLayout.setHorizontalGroup(
             zgony_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(zgony_oknoLayout.createSequentialGroup()
-                .addComponent(zgony_zdjecie, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 62, Short.MAX_VALUE))
+                .addGap(159, 159, 159)
+                .addComponent(zgony_tytul, javax.swing.GroupLayout.PREFERRED_SIZE, 691, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(150, Short.MAX_VALUE))
             .addGroup(zgony_oknoLayout.createSequentialGroup()
                 .addGroup(zgony_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(zgony_zdjecie, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(zgony_oknoLayout.createSequentialGroup()
-                        .addGap(165, 165, 165)
-                        .addComponent(zgony_poprzedni)
-                        .addGap(125, 125, 125)
-                        .addComponent(zgony_nastepny)
-                        .addGap(139, 139, 139)
-                        .addComponent(zgony_wyjdz))
+                        .addGap(223, 223, 223)
+                        .addComponent(zgony_poprzedni, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(zgony_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(zgony_oknoLayout.createSequentialGroup()
-                        .addGap(159, 159, 159)
-                        .addComponent(zgony_tytul, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1))
+                    .addGroup(zgony_oknoLayout.createSequentialGroup()
+                        .addGap(90, 90, 90)
+                        .addComponent(zgony_nastepny, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(111, 111, 111)
+                        .addComponent(zgony_wyjdz, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         zgony_oknoLayout.setVerticalGroup(
             zgony_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, zgony_oknoLayout.createSequentialGroup()
+            .addGroup(zgony_oknoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(zgony_tytul, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(zgony_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(zgony_oknoLayout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(zgony_zdjecie, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(zgony_oknoLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 306, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
-                .addGroup(zgony_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(zgony_poprzedni)
-                    .addComponent(zgony_nastepny)
-                    .addComponent(zgony_wyjdz))
-                .addGap(24, 24, 24))
+                .addComponent(zgony_tytul, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(zgony_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(zgony_zdjecie, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 476, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(zgony_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(zgony_nastepny, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+                    .addComponent(zgony_poprzedni, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(zgony_wyjdz, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(435, 435, 435))
         );
 
         wirusy_okno.setAlwaysOnTop(true);
         wirusy_okno.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
-        wirusy_okno.setLocation(new java.awt.Point(300, 140));
+        wirusy_okno.setLocation(new java.awt.Point(175, 80));
         wirusy_okno.setUndecorated(true);
         wirusy_okno.setResizable(false);
-        wirusy_okno.setSize(new java.awt.Dimension(770, 475));
+        wirusy_okno.setSize(new java.awt.Dimension(1000, 700));
 
         wirusy_opis.setEditable(false);
         wirusy_opis.setColumns(20);
@@ -366,40 +372,42 @@ public class okno_glowne extends javax.swing.JFrame {
         wirusy_okno.getContentPane().setLayout(wirusy_oknoLayout);
         wirusy_oknoLayout.setHorizontalGroup(
             wirusy_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, wirusy_oknoLayout.createSequentialGroup()
-                .addGroup(wirusy_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(wirusy_oknoLayout.createSequentialGroup()
-                        .addGap(133, 133, 133)
-                        .addComponent(wirusy_poprzedni))
-                    .addComponent(wirusy_zdjecie, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(wirusy_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(wirusy_oknoLayout.createSequentialGroup()
-                        .addComponent(wirusy_nastepny)
-                        .addGap(114, 114, 114)
-                        .addComponent(wirusy_zamknij))
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(56, 56, 56))
             .addGroup(wirusy_oknoLayout.createSequentialGroup()
-                .addGap(187, 187, 187)
-                .addComponent(wirusy_tytul, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(wirusy_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(wirusy_oknoLayout.createSequentialGroup()
+                        .addComponent(wirusy_zdjecie, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane3))
+                    .addGroup(wirusy_oknoLayout.createSequentialGroup()
+                        .addGroup(wirusy_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(wirusy_oknoLayout.createSequentialGroup()
+                                .addGap(187, 187, 187)
+                                .addComponent(wirusy_tytul, javax.swing.GroupLayout.PREFERRED_SIZE, 592, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(wirusy_oknoLayout.createSequentialGroup()
+                                .addGap(170, 170, 170)
+                                .addComponent(wirusy_poprzedni, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(102, 102, 102)
+                                .addComponent(wirusy_nastepny, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(114, 114, 114)
+                                .addComponent(wirusy_zamknij, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 162, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         wirusy_oknoLayout.setVerticalGroup(
             wirusy_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(wirusy_oknoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(wirusy_tytul, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(wirusy_tytul, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(wirusy_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(wirusy_zdjecie, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                .addGroup(wirusy_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(wirusy_poprzedni)
-                    .addComponent(wirusy_nastepny)
-                    .addComponent(wirusy_zamknij))
-                .addGap(31, 31, 31))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 439, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(wirusy_oknoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(wirusy_nastepny, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
+                    .addComponent(wirusy_poprzedni, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(wirusy_zamknij, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(122, Short.MAX_VALUE))
         );
 
         haslo.setAlwaysOnTop(true);
@@ -407,10 +415,12 @@ public class okno_glowne extends javax.swing.JFrame {
         haslo.setLocation(new java.awt.Point(300, 50));
         haslo.setUndecorated(true);
         haslo.setResizable(false);
-        haslo.setSize(new java.awt.Dimension(405, 315));
+        haslo.setSize(new java.awt.Dimension(475, 360));
 
         haslo_tekst.setEditable(false);
+        haslo_tekst.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel2.setText("Podaj hasło:");
 
         haslo_7.setText("7");
@@ -495,74 +505,70 @@ public class okno_glowne extends javax.swing.JFrame {
         hasloLayout.setHorizontalGroup(
             hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(hasloLayout.createSequentialGroup()
-                .addGroup(hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(hasloLayout.createSequentialGroup()
-                        .addGap(108, 108, 108)
-                        .addComponent(haslo_ok))
-                    .addGroup(hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(hasloLayout.createSequentialGroup()
-                            .addGap(95, 95, 95)
-                            .addComponent(jLabel2))
-                        .addGroup(hasloLayout.createSequentialGroup()
-                            .addGap(59, 59, 59)
-                            .addGroup(hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(haslo_4)
-                                .addComponent(haslo_7, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(haslo_1)))))
                 .addGroup(hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(hasloLayout.createSequentialGroup()
-                        .addGroup(hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(hasloLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(haslo_tekst, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(hasloLayout.createSequentialGroup()
-                                .addGap(21, 21, 21)
-                                .addGroup(hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(hasloLayout.createSequentialGroup()
-                                        .addComponent(haslo_2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(haslo_3))
-                                    .addGroup(hasloLayout.createSequentialGroup()
-                                        .addComponent(haslo_5)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(haslo_6))
-                                    .addGroup(hasloLayout.createSequentialGroup()
-                                        .addComponent(haslo_8)
-                                        .addGap(81, 81, 81)
-                                        .addComponent(haslo_9)))))
-                        .addGap(70, 70, 70))
+                        .addGap(95, 95, 95)
+                        .addComponent(jLabel2))
                     .addGroup(hasloLayout.createSequentialGroup()
-                        .addGap(85, 85, 85)
-                        .addComponent(haslo_kasuj)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(33, 33, 33)
+                        .addGroup(hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(haslo_1, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+                            .addComponent(haslo_4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(haslo_7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(hasloLayout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(haslo_ok, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(hasloLayout.createSequentialGroup()
+                        .addGap(136, 136, 136)
+                        .addComponent(haslo_kasuj, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(hasloLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(haslo_tekst, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(hasloLayout.createSequentialGroup()
+                                .addGroup(hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(haslo_5, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(haslo_8, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(haslo_2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(79, 79, 79)
+                                .addGroup(hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(haslo_9, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
+                                    .addComponent(haslo_6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(haslo_3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
         hasloLayout.setVerticalGroup(
             hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(hasloLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
+                .addGap(30, 30, 30)
                 .addGroup(hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(haslo_tekst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(43, 43, 43)
-                .addGroup(hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(haslo_7)
-                    .addComponent(haslo_8)
-                    .addComponent(haslo_9))
-                .addGap(38, 38, 38)
-                .addGroup(hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(haslo_4)
-                    .addComponent(haslo_5)
-                    .addComponent(haslo_6))
-                .addGap(44, 44, 44)
-                .addGroup(hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(haslo_1)
-                    .addComponent(haslo_2)
-                    .addComponent(haslo_3))
+                    .addComponent(jLabel2)
+                    .addComponent(haslo_tekst, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23)
+                .addGroup(hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(hasloLayout.createSequentialGroup()
+                        .addComponent(haslo_9, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(hasloLayout.createSequentialGroup()
+                        .addGroup(hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(haslo_7, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(haslo_8, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                        .addGroup(hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(haslo_4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(haslo_5, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(haslo_6, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(27, 27, 27)
+                .addGroup(hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(haslo_1, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
+                    .addComponent(haslo_2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(haslo_3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addGroup(hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(haslo_kasuj)
-                    .addComponent(haslo_ok))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addGroup(hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(haslo_ok, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(haslo_kasuj, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 10, Short.MAX_VALUE))
         );
 
         strzalki_okno.setAlwaysOnTop(true);
@@ -638,38 +644,38 @@ public class okno_glowne extends javax.swing.JFrame {
             .addGroup(zamknij_hasloLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(zamknij_1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                 .addComponent(zamknij_2, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60)
+                .addGap(55, 55, 55)
                 .addComponent(zamknij_3, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33))
+                .addGap(36, 36, 36))
             .addGroup(zamknij_hasloLayout.createSequentialGroup()
                 .addGroup(zamknij_hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(zamknij_hasloLayout.createSequentialGroup()
-                        .addGap(91, 91, 91)
+                        .addGap(90, 90, 90)
                         .addComponent(zamknij_4, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(67, 67, 67)
+                        .addGap(71, 71, 71)
                         .addComponent(zamknij_5, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(zamknij_hasloLayout.createSequentialGroup()
-                        .addGap(152, 152, 152)
-                        .addComponent(zamknij_zamknij)))
+                        .addGap(120, 120, 120)
+                        .addComponent(zamknij_zamknij, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         zamknij_hasloLayout.setVerticalGroup(
             zamknij_hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(zamknij_hasloLayout.createSequentialGroup()
-                .addGap(62, 62, 62)
+                .addGap(50, 50, 50)
                 .addGroup(zamknij_hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(zamknij_1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(zamknij_2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(zamknij_3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                .addGap(41, 41, 41)
                 .addGroup(zamknij_hasloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(zamknij_4, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(zamknij_5, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addComponent(zamknij_zamknij)
-                .addGap(28, 28, 28))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addComponent(zamknij_zamknij, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         zamknij_haslo.getAccessibleContext().setAccessibleName("");
@@ -722,6 +728,7 @@ public class okno_glowne extends javax.swing.JFrame {
 
         strzalki.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         strzalki.setText("Strzałki");
+        strzalki.setEnabled(false);
         strzalki.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 strzalkiActionPerformed(evt);
@@ -843,7 +850,7 @@ public class okno_glowne extends javax.swing.JFrame {
     private void uzytkownikActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uzytkownikActionPerformed
         // TODO add your handling code here:
         komunikat.setVisible(true);
-        komunikat_tekst.setText("Proszę przycisnąć przycisk zamknij i poczekać \n2 sekundy na identyfikację.");
+        komunikat_tekst.setText("Proszę przycisnąć przycisk zamknij i\npoczekać kilka sekund na identyfikację.");
         moment = 2;
     }//GEN-LAST:event_uzytkownikActionPerformed
 
@@ -952,7 +959,7 @@ public class okno_glowne extends javax.swing.JFrame {
         haslo.setVisible(false);
         if (haslo_haslo.equals(prawdziwe_haslo)) {
             komunikat.setVisible(true);
-            komunikat_tekst.setText("Poprawne hasło. Proszę nacisnąć zamknij i poczekać \n2 sekundy na rejestrację.");
+            komunikat_tekst.setText("Poprawne hasło. Proszę nacisnąć zamknij i\npoczekać kilka sekund na rejestrację.");
 
             moment = 1;
 
@@ -965,6 +972,63 @@ public class okno_glowne extends javax.swing.JFrame {
 
     private void komunikat_zamknijActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_komunikat_zamknijActionPerformed
         // TODO add your handling code here:=2;
+        if (strzalki_przycisk == false) {
+            try {
+                // TODO add your handling code here:
+                ard.send("koniec");
+            } catch (InterruptedException ex) {
+                Logger.getLogger(okno_glowne.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            while (true) {
+                try {
+                    znak = ard.read();
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(okno_glowne.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (IOException ex) {
+                    Logger.getLogger(okno_glowne.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                if (znak == '/') {
+                    strzalki.setEnabled(false);
+                    break;
+                }
+                if (znak == 'c') {
+                    strzalki.setEnabled(true);
+                    break;
+                }
+
+            }
+            komunikat.setVisible(false);
+            strzalki_przycisk = true;
+        }
+        if (klawiatura_przycisk == false) {
+            znak = 'x';
+            try {
+                // TODO add your handling code h    ere:
+                ard.send("klawiatura");
+            } catch (InterruptedException ex) {
+                Logger.getLogger(okno_glowne.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            while (true) {
+                try {
+                    znak = ard.read();
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(okno_glowne.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (IOException ex) {
+                    Logger.getLogger(okno_glowne.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                if (znak == '1') {
+                    klawiatura.setEnabled(false);
+                    zaloguj.setEnabled(true);
+                    break;
+                }
+                if (znak == 'b') {
+                    klawiatura.setEnabled(true);
+                    break;
+                }
+            }
+            komunikat.setVisible(false);
+            klawiatura_przycisk = true;
+        }
         if (moment == 5) {
             moment = 10;
         }
@@ -1040,58 +1104,17 @@ public class okno_glowne extends javax.swing.JFrame {
     }//GEN-LAST:event_zalogujActionPerformed
 
     private void klawiaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_klawiaturaActionPerformed
-        znak = 'x';
-        try {
-            // TODO add your handling code h    ere:
-            ard.send("klawiatura");
-        } catch (InterruptedException ex) {
-            Logger.getLogger(okno_glowne.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        while (true) {
-            try {
-                znak = ard.read();
-            } catch (InterruptedException ex) {
-                Logger.getLogger(okno_glowne.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IOException ex) {
-                Logger.getLogger(okno_glowne.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            if (znak == '1') {
-                klawiatura.setEnabled(false);
-                zaloguj.setEnabled(true);
-                break;
-            }
-            if (znak == 'b') {
-                klawiatura.setEnabled(true);
-                break;
-            }
-        }
+        komunikat.setVisible(true);
+ 
+        komunikat_tekst.setText("Proszę kliknąć przycisk zamknij\ni wprowadzić kod na klawiaturze membranowej.\nMasz na to 15 sekund!");
+        klawiatura_przycisk = false;
+
     }//GEN-LAST:event_klawiaturaActionPerformed
 
     private void strzalkiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_strzalkiActionPerformed
-        try {
-            // TODO add your handling code here:
-            ard.send("koniec");
-        } catch (InterruptedException ex) {
-            Logger.getLogger(okno_glowne.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        while (true) {
-            try {
-                znak = ard.read();
-            } catch (InterruptedException ex) {
-                Logger.getLogger(okno_glowne.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IOException ex) {
-                Logger.getLogger(okno_glowne.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            if (znak == '/') {
-                strzalki.setEnabled(false);
-                break;
-            }
-            if (znak == 'c') {
-                strzalki.setEnabled(true);
-                break;
-            }
-
-        }
+        komunikat.setVisible(true);
+        komunikat_tekst.setText("Proszę kliknąć przycisk zamknij\ni wprowadzić kombinację ruchów.\nMasz na to 15 sekund!");
+        strzalki_przycisk = false;
     }//GEN-LAST:event_strzalkiActionPerformed
 
     private void zgony_nastepnyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zgony_nastepnyActionPerformed
